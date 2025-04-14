@@ -38,7 +38,7 @@ minikube addons enable ingress (es normal que tarde)
 Ya habilito el addon, nos sigue conseguir la ip de minikube: "minikube ip"
 
 luego nos queda decirle a la maquina que no solo se va a poder acceder desde el puesto, sino tambien por un url propio:
-echo "$(resultado de minikube ip) local.service | sudo tee -a /etc/hosts
+echo "$(resultado de minikube ip) local.service" | sudo tee -a /etc/hosts
 
 si queres probar si funciona pone en el buscador lo siguiente: http://local.service/
 
