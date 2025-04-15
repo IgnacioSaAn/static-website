@@ -19,7 +19,7 @@ minikube start --mount --mount-string="/home/inachi/TD5D/static-website:/mnt/web
 #El primer directorio debe ser el directorio en el que se encuentre tu carpeta con el HTML
 
 Luego de levantar la maquina lo unico que nos queda es aplicar nuestros manifiestos por lo que deberemos hacer cd hasta la carpeta donde se encuentran los mismo.
-
+Esto lo haremos solo en las carpetas: deployment,service y volume
 Ya dentro de la misma debemos poner: "kubectl apply -f ." 
 
 Despues de eso nuestro pod ya debería estar levantandose, podemos ver el estado del mismo haciendo kubectl get pods: el nombre será: static-site-XXX-XXX.El estado de este será pending, ContainerCreating y por último Running.
@@ -34,6 +34,8 @@ minikube service static-site-service
 SI QUERES SUMARLE UN PLUS DE AGREGARLE FUNCIONALIDAD AL ARCHIVO INGRESS HACE ESTO:
 
 minikube addons enable ingress (es normal que tarde)
+
+Luego de esto haremos un apply como hicimos con los manifiestos anteriormente, pero lo haremos con la carpeta ingress
 
 Ya habilito el addon, nos sigue conseguir la ip de minikube: "minikube ip"
 
